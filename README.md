@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Frontend Mentor - FAQ Accordion Card
 
 ![Design preview for the FAQ Accordion Card coding challenge](./design/desktop-preview.jpg)
@@ -78,3 +79,7 @@ A massive thank you to our community sponsors!
 - [Zero to Mastery](https://bit.ly/fem-ztm) is an incredible learning resource for all things web development. Led by Andrei Neagoie, the courses are really high-quality content and cover a wide range of in-demand skills.
 - [Diversify Tech](https://bit.ly/fem-diversify-tech) is an amazing resource for underrepresented people in tech. The site features job listings for anyone seeking new opportunities. The resource section is also full of useful links to dive into!
 - [Triplebyte](http://bit.ly/fem-triplebyte) is a really nice offering if you're looking for a new role. It's a free service that lets you take a confidential quiz. Based on your results companies will pitch you for their vacant roles!
+=======
+# FAQ-Accordion-Card
+FrontendMentor Challenge
+>>>>>>> c77676c9baf24e2000251a27d25cdcf3a9d3b214
