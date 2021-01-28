@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+body .illustration {
+  display: none;
+}
+body .box-image {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+  left: -95px;
+  top: 190px;
+}
+body .card-container {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  padding-right: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  z-index: 1;
+  margin: auto;
+}
+body .card-container .container-womenIllustrator {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+body .card-container .container-womenIllustrator .women-illustration {
+  position: relative;
+  width: 100%;
+  left: -80px;
+  z-index: 9;
+}
+body .card-container .questions {
+  height: 100%;
+  width: 500px;
+  padding: 15px;
+  border-radius: 20px;
+  overflow-y: scroll;
+}
+body .card-container .questions h2 {
+  margin-top: 30px;
+  color: #1d1e35;
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+body .card-container .questions p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body .card-container .questions .question {
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+body .card-container .questions .question:hover {
+  color: #f47c57;
+}
+body .card-container .questions .question:active {
+  font-weight: 700;
+}
+body .card-container .questions .question img {
+  width: 13px;
+  cursor: pointer;
+}
+body .card-container .questions .answer {
+  position: relative;
+  display: none;
+  top: -80px;
+  color: #787887;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px;
+}
+body .card-container .questions .activeQuestion {
+  position: relative;
+  font-weight: 700;
+  color: #1d1e35;
+  border-top: none;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+body .card-container .questions .activeAnswer {
+  position: relative;
+  display: block;
+  top: 0;
+  animation-name: fadeDown;
+  animation-duration: 0.8s;
+  transition: 0.5s all ease;
+}
+body .card-container .questions .deploy {
+  position: relative;
+  display: block;
+  animation-name: fadeDown;
+  animation-duration: 0.8s;
+}
+body .card-container .questions hr {
+  width: 100%;
+  color: #e7e7e9;
+  opacity: 0.6;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+body .attribution {
+  width: 100%;
+  font-size: 10px;
+  padding: 10px;
+  color: #fff;
+}
+body .attribution a {
+  color: inherit;
+}
+body .attribution :nth-child(2) {
+  text-decoration: underline;
+  font-weight: 700;
+  color: #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    padding-top: 120px;
+    flex-direction: column;
+  }
+  body .box-image {
+    display: none;
+    height: auto;
+  }
+  body .card-container {
+    width: 90%;
+    margin: auto 50px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+    background-image: url(../images/bg-pattern-mobile.svg);
+    background-position: top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    transition: 0.7s all ease-in-out;
+  }
+  body .card-container .women-illustration {
+    display: none;
+  }
+  body .card-container .illustration {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -105px;
+    left: -15px;
+  }
+  body .card-container .questions {
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
+    height: auto;
+    padding: 0 15px;
+  }
+  body .card-container .questions h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+@keyframes fadeDown {
+  from {
+    top: -80px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes hidde {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    transition: 1s all ease-in-out;
+    top: -80px;
+    opacity: 0;
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

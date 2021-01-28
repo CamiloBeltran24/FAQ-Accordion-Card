@@ -1,0 +1,253 @@
+@import "_colors.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html {
+  width: 100%;
+  height: 100%;
+  // position: relative;
+}
+body {
+  position: relative;
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: linear-gradient($soft-violet, $soft-blue);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+  // max-width: 1440px;
+  .illustration {
+    display: none;
+  }
+  .box-image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    left: -95px;
+    top: 190px;
+    // overflow: visible;
+    // box-shadow: 1px 1px 1px hsl(238, 29%, 16%);
+  }
+  .card-container {
+    // line-height: 50%;
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    padding-right: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    // overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    z-index: 1;
+
+    margin: auto;
+    .container-womenIllustrator {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      .women-illustration {
+        position: relative;
+        width: 100%;
+        left: -80px;
+        // top: 10px;
+        z-index: 9;
+      }
+    }
+    .questions {
+      height: 100%;
+      width: 500px;
+      padding: 15px;
+      border-radius: 20px;
+      // display: flex;
+      // align-items: center;
+      // flex-wrap: wrap;
+      overflow-y: scroll;
+      h2 {
+        margin-top: 30px;
+        color: hsl(238, 29%, 16%);
+        font-weight: 700;
+        font-size: 35px;
+        margin-bottom: 30px;
+      }
+      p {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .question {
+        position: relative;
+        cursor: pointer;
+        font-size: 14px;
+        margin-bottom: 15px;
+        padding: 5px;
+        &:hover {
+          // font-weight: 700;
+          color: hsl(14, 88%, 65%);
+        }
+        &:active {
+          font-weight: 700;
+        }
+        img {
+          width: 13px;
+          cursor: pointer;
+        }
+      }
+      .answer {
+        position: relative;
+        display: none;
+        top: -80px;
+        // color: #f2f2f2;
+        color: hsl(240, 6%, 50%);
+        border-radius: 10px;
+        // background: rgba(0, 0, 0, 0.1);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 10px;
+      }
+      .activeQuestion {
+        position: relative;
+        font-weight: 700;
+        color: hsl(238, 29%, 16%);
+        border-top: none;
+        border-radius: 10px;
+        // box-shadow: 3px 3px 5px;
+        background-color: #f2f2f2;
+      }
+      .activeAnswer {
+        position: relative;
+        display: block;
+        top: 0;
+        animation-name: fadeDown;
+        animation-duration: 0.8s;
+        transition: 0.5s all ease;
+      }
+      .deploy {
+        position: relative;
+        display: block;
+        animation-name: fadeDown;
+        animation-duration: 0.8s;
+      }
+
+      hr {
+        width: 100%;
+        color: hsl(240, 5%, 91%);
+        opacity: 0.6;
+        // margin: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .attribution {
+    width: 100%;
+    font-size: 10px;
+    padding: 10px;
+    // height: 10px;
+    color: #fff;
+    a {
+      color: inherit;
+    }
+    :nth-child(2) {
+      text-decoration: underline;
+      font-weight: 700;
+      color: #f2f2f2;
+      // padding: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    padding-top: 120px;
+    flex-direction: column;
+    .box-image {
+      display: none;
+      height: auto;
+    }
+    .card-container {
+      width: 90%;
+      margin: auto 50px;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      // text-align: center;
+      overflow: visible;
+      background-image: url(../images/bg-pattern-mobile.svg);
+      background-position: top;
+      background-size: auto;
+      background-repeat: no-repeat;
+      margin-bottom: 10px;
+      transition: 0.7s all ease-in-out;
+      // background-blend-mode: lighten;
+
+      .women-illustration {
+        display: none;
+        // text-align: center;
+        // top: -200px;
+      }
+      .illustration {
+        display: block;
+        margin: auto;
+        position: relative;
+        top: -105px;
+        left: -15px;
+        // width: 100px;
+      }
+      .questions {
+        width: 100%;
+        margin-top: 0;
+        overflow: hidden;
+        height: auto;
+        padding: 0 15px;
+        h2 {
+          text-align: center;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    top: -80px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes hidde {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    transition: 1s all ease-in-out;
+    top: -80px;
+    opacity: 0;
+    display: none;
+  }
+}
